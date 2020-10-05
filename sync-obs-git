@@ -1,0 +1,5 @@
+#!/bin/bash
+# 
+# Finds all obsidian vaults using ~/Scripts/find-obs-vaults, then syncs them with git using ~/Scripts/sync-git
+# 
+/home/valent1ne/Scripts/find-obs-vaults | xargs -d '\n' -I % /home/valent1ne/Scripts/sync-git %

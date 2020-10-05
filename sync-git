@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+# This script will
+# 1. Check if passed directory is a git repo
+# 2. Checks if there are any changes
+# 3. Commits and pushes if there are
+# 
+# Useful for directories I use git to backup
+
+cd "$1" #cd into the git repo
+
+INSIDE_GIT_REPO="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
+if [ ! $INSIDE_GIT_REPO ]; then
+	exit 0
+fi 
+
+CHANGES_EXIST=$(git status --porcelain | wc -l)
+if [ $CHANGES_EXIST -eq 0 ]; then
+	exit 0
+fi
+
+git add .; git commit -q -m "$(date "+%m-%d-%y %H:%M:%S")"; git push -q
