@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# This script is a list of the git sync commands I want to run daily
+# Symlinked to /etc/cron.daily
+
+/home/valent1ne/Scripts/sync-obs-git
+/home/valent1ne/Scripts/sync-git /home/valent1ne/Scripts
