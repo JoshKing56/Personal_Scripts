@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "Anacron was run on $(date)" >> ~/anacron-check
+echo "Anacron was run on $(date)" >> /home/valent1ne/anacron-check
 

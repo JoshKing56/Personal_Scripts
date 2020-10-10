@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "Cron.hourly was run on $(date)" >> ~/cron-status
+echo "Cron.hourly was run on $(date)" >> /home/valent1ne/cron-status
 
